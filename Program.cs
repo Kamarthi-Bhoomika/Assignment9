@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Assignment9
 {
-    public class CustomException : Exception
+    public class ValidationException : Exception
     {
-        public CustomException(string message) : base(message)
+        public ValidationException(string message) : base(message)
         {
 
         }
@@ -29,11 +29,11 @@ namespace Assignment9
 
                 if(name.Length < 6)
                 {
-                    throw new CustomException("Name should have minimum 6 characters");
+                    throw new ValidationException("Name should have minimum 6 characters");
                 }
                 else if(password.Length < 8) 
                 {
-                    throw new CustomException("Password length should be of more than 8");
+                    throw new ValidationException("Password length should be of more than 8");
                 }
                 else
                 {
@@ -41,9 +41,9 @@ namespace Assignment9
                     Console.WriteLine($"Name: {name} \nEmail: {email} \nPassword: {password}");
                 }
             }
-            catch(CustomException ce)
+            catch(ValidationException ve)
             {
-                Console.WriteLine("Validation Exception!! "+ce.Message);
+                Console.WriteLine("Validation Exception!! "+ve.Message);
             }
             catch(Exception ex)
             {
