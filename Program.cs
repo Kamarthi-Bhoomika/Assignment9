@@ -51,7 +51,7 @@ namespace Assignment9
             }
             finally
             {
-                Console.WriteLine("***End of Program***");
+                Console.WriteLine("***End of Registration***");
                 Console.ReadKey();
             }
         }
