@@ -35,18 +35,15 @@ namespace Assignment9
                 {
                     throw new CustomException("Password length should be of more than 8");
                 }
-                else if(name == "Bhoomika" &&  password == "12345678")
-                {
-                    Console.WriteLine("Login Successfull");
-                }
                 else
                 {
-                    throw new CustomException("Wrong login Credentials");
+                    Console.WriteLine("User Registration Success");
+                    Console.WriteLine($"Name: {name} \nEmail: {email} \nPassword: {password}");
                 }
             }
             catch(CustomException ce)
             {
-                Console.WriteLine("Custom Error!! "+ce.Message);
+                Console.WriteLine("Validation Exception!! "+ce.Message);
             }
             catch(Exception ex)
             {
